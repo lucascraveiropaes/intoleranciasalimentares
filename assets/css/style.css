@@ -1,0 +1,293 @@
+/* General */
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	background: #ededed;
+}
+:root {
+ 	--shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+body, header {
+	min-width: 100vw;
+	max-width: 100%;
+	min-height: 100vh;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow-x: hidden;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, span, small, ul, li, label { color: #3d3c3c; }
+small { opacity: 0.97; }
+
+hr { margin: 1.5em auto; }
+a { color: #2741d1; transition: all .3s ease }
+a:hover,
+a:active,
+a:focus { color: #ef0000; text-decoration: none; }
+
+p, ul li {
+	font-size: 19px;
+	line-height: 32px;
+	color: #5f5f5f;
+    margin-bottom: 23px;
+}
+	ul li {
+    	margin-bottom: 5px;
+	}
+h1 {
+	font-size: 39px;
+	line-height: 52px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 34px;
+	line-height: 43px;
+	margin-bottom: 30px;
+}
+	h2::after {
+		content: '';
+	    display: block;
+	    top: 0px;
+	    width: 65%;
+	    left: 0;
+	    border-bottom: 6px solid rgba(239, 19, 19, .9);
+	    border-radius: 20px;
+        margin-top: 15px;
+	}
+h3 {
+	font-size: 25px;
+	line-height: 29px;
+}
+h4 {
+	margin: 15px 0px 15px 0px;
+	font-weight: 600;
+	color: #000;
+}
+
+header {
+	background-image: url(../img/home-bg.jpeg);
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+	header#receitas {
+		background-image: url(../img/receitas-bg.jpeg);
+	}
+	header * { color: #FFF; }
+	header .container { margin: 15px 0px 0px 35px }
+	
+section {
+	padding: 4em 0em;
+}
+
+footer {
+	width: 100vw;
+	text-align: center;
+	padding: 1em 3em;
+}
+	footer p a {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+	footer p { margin: 0px; font-size: 14px; }
+	footer p a img { width: 29px; margin-left: 4px }
+
+.container-fluid {
+	width: 97% !important;
+}
+
+.banner {
+	max-height: 400px;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	border-radius: 5px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.07);
+       -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.07);
+            box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+	border-radius: 6px;
+	padding: 2em 3em;
+	margin-bottom: 2em;
+	background: #FFF;
+	border-color: rgba(0,0,0,0.08);
+    -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.07);
+       -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.07);
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.07);
+}
+
+.pull-right { text-align: right; }
+
+.bg-shadow,
+.bg-blur {
+    position: absolute;
+    border-radius: 50%;
+    width: 52%;
+    height: 46%;
+    bottom: 26%;
+    left: 1%;
+	overflow: hidden;
+    z-index: 0;
+}
+	
+	.bg-shadow {
+	    filter: blur(72px);
+	    background: rgba(0,0,0,0.5);
+	    z-index: 1;
+	}
+	.bg-blur {
+		filter: blur(4px);
+	    background-color: rgba(0,0,0,0.6);
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	}
+
+.thin-bold {
+	font-weight: 600 !important;
+}
+
+.call-to-action {
+	background: #ef1313;
+	border-radius: 6px;
+	padding: 10px 10px;
+	color: #FFF;
+    -webkit-box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+       -moz-box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+            box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+.call-to-action:hover,
+.call-to-action:focus,
+.call-to-action:active {
+	outline: none;
+	color: #FFF;
+	animation: bounceRight .7s;
+    -webkit-box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+       -moz-box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+            box-shadow: 0px 4px 20px rgba(239, 19, 19, 0.8);
+}
+
+@keyframes bounceRight {
+	0%, 30%, 60%, 100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	15% {
+		-webkit-transform: translateX(20px);
+		transform: translateX(20px);
+	}
+
+	45% {
+		-webkit-transform: translateX(-15px);
+		transform: translateX(-15px);
+	}
+
+	80% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+}
+
+/* Fixed Sidebar */
+#sidebar {
+    will-change: min-height;
+}
+	#sidebar .card {
+		padding: 1.5em;
+	}
+	#sidebar .card h6 {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-weight: 700
+	}
+
+
+.menu {
+	padding: 0;
+	margin: 0;
+}
+	.menu li {
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 13px;
+		list-style: none;
+		border: 1px solid transparent;
+	}
+	.menu li:last-child { margin-bottom: 0px; }
+	.menu li a { color: #0056b3; }
+	.menu li a:hover { color: rgba(239, 19, 19, .9); }
+
+	.menu li a::after {
+	    content: '';
+	    display: block;
+	    top: 0px;
+	    width: 0%;
+	    left: 0;
+	    border-bottom: 3px solid rgba(239, 19, 19, .9);
+	    border-radius: 20px;
+	    margin-top: 6px;
+	    transition: all .3s ease-in-out;
+	}
+	.menu li a:hover::after { width: 55%; }
+
+	#sidebar #about small {
+		font-size: 14px;
+		margin-bottom: 3px;
+		opacity: 0.6
+	}
+	#sidebar #about p {
+		font-size: 18px;
+		line-height: 28px;
+		color: rgba(0,0,0,0.7);
+		margin-bottom: 12px;
+	}
+
+	#sidebar #about img.avatar {
+		border-radius: 50%;
+		width: 80%;
+		margin: 10px 10% 20px 10%;
+	    -webkit-box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
+	       -moz-box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
+	            box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
+	}
+
+.sidebar__inner{
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+}
+
+
+/* Media Queries */
+@media (max-width:768px) {
+	header .container { margin: 100px 15px 0px 15px }
+	section { padding: 0em; }
+	.card { padding: 1.5em }
+
+	#sidebar #about p { font-size: 19px; line-height: 23px }
+	.menu li { font-size: 19px; }
+	.container-fluid {
+		width: 100% !important;
+	}
+}
