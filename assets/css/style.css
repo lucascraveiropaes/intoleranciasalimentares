@@ -133,6 +133,7 @@ footer {
 
 .bg-shadow,
 .bg-blur {
+    filter: blur(72px);
     position: absolute;
     border-radius: 50%;
     width: 52%;
@@ -144,12 +145,10 @@ footer {
 }
 	
 	.bg-shadow {
-	    filter: blur(72px);
 	    background: rgba(0,0,0,0.5);
 	    z-index: 1;
 	}
 	.bg-blur {
-		filter: blur(4px);
 	    background-color: rgba(0,0,0,0.6);
 	    background-size: cover;
 	    background-position: center;
